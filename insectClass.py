@@ -5,20 +5,12 @@ import random
 
 class Insect:
     def __init__(self):
-        self.wings = "long"
-        self.legs = "long"
-
-    def wings(self):
-        if random.randint(0, 1) == 0:
-            self.wings = "long"
-        else:
-            self.wings = "short"
-
-    def legs(self):
-        if random.randint(0, 3) == 0:
-            self.legs = "long"
-        else:
-            self.legs = "short"
+        self.wings = 4
+        self.legs = 3
+        self.flight = 0
 
     def flight_length(self):
-        return self.wings
+        self.flight = random.randint(1, 10)
+
+    def get_fly(self):
+        return self.flight_length
